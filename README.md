@@ -30,13 +30,36 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach iterates through each element of an array executing a function for each of the elements whilst returning "undefined" itself, it is allowed to mutate the array it is 
+called on. The .map method iterates through each element of the array preforming a function on the data and moves the new values to a new array. .map requires variable assignment (e.g var = someArr.map(function)) forEach does not.
+
 2. What is the difference between a function and a method?
+
+Methods are declared inside object structures, functions are not. 
 
 3. What is closure?
 
+Closure refers to the concept of a lexical environment, that is to say, the importance of a piece of code's location in the general code structure. In JavaScript there is the
+global and local scopes. Closure describes how these local scopes go about accessing data both within and outsides their local range. For instance if a variable is referenced 
+that is not within the range of a certain local scope Javascript will look outside of that scope to the nearest adjacent local scope (or the global scope providing it is the
+only thing existing outside of a specific local scope) for the existance of that variable.  
+
 4. Describe the four rules of the 'this' keyword.
 
+Rule 1: Window/Global Object Binding: When this is called by itself it represents the Global Object which is the container for the 
+JavaScript code unique to each instance of its occurance. On a web browser the Global Object is called window. The Global Object is the initial state in which Javascript 
+executes code before refering to functions as they are called inside it. It provides Javascript with its basic functionality.
+
+Rule 2: Implicit Binding: When "this" is called in the following format "this.something", it refers to the object directly preceding what "something" represents. 
+
+Rule 3: New binding: In this case "this" refers to the particular object that was created by a constructor function, the constructor function has "this" keywords as 
+variable declarations which represent some form of key/value information (e.g. primitive data types, functions, sub-objects) that are instantiated in a new object when the constructor is called to instantiate it.
+
+Rule 4: Principle 4 Explicit Binding: Explicit binding allows a programmer to explicitly point to the environment in which "this" refers to its container object, using the call or apply methods. By calling or applying a certain object "this" now refers to that object.  
+
 5. Why do we need super() in an extended class?
+
+super() allows an extended class to access its parents methods and key/value pairs. 
 
 ## Project Set up
 
